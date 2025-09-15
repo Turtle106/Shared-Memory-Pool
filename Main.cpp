@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
-#include "npc.h"
+#include "NPC.h"
 int main() {
     // Create several NPCs
     std::vector<NPC*> npcs;
     // Spawn a wave of enemies
-    for (int i = 0; i < 10; ++i) {
-        npcs.push_back(new NPC(
+    for (int i = 0; i < 50; ++i) {
+        npcs.push_back(NPCFactory::spawn(
         "Goblin_" + std::to_string(i),
         "enemy",
         i * 10, i * 10, // Position
@@ -15,7 +15,7 @@ int main() {
     }
 
     // Show one NPC
-    std::cout << *npcs[5] << std::endl;
+
     // Delete some NPCs (simulating death)
     delete npcs[3];
     delete npcs[5];

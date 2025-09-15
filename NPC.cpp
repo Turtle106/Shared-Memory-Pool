@@ -12,3 +12,7 @@ void NPC::operator delete(void* ptr) noexcept {
 }
 
 void NPC::profile() { pool.profile(); }
+
+NPC* NPCFactory::spawn(const std::string& name, const std::string& type, int x, int y, int health) {
+    return new NPC(name, type, x, y, health);
+}
