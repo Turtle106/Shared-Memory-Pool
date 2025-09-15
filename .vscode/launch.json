@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch NPC Main",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/debug",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "build with make",
+            "MIMode": "gdb"
+        }
+    ]
+}
