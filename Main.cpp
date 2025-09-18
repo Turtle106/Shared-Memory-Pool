@@ -1,7 +1,16 @@
 #include <iostream>
 #include <vector>
+#include <climits>
 #include "NPC.h"
+#include "Squirrel.h"
 int main() {
+    //Release the Squirrels
+    std::vector<Squirrel*> squirrels;
+    for (int i = 0; i < 1000; ++i) {
+        //1000 Squirrels with max cuteness
+        squirrels.push_back(new Squirrel(INT_MAX, i, 1000 - i));
+    }
+
     // Create several NPCs
     std::vector<NPC*> npcs;
     // Spawn a wave of enemies
